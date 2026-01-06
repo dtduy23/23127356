@@ -121,7 +121,7 @@ pipeline {
                         fi
                         
                         # Try to access API - MUST succeed
-                        if ! curl -f http://0.0.0.0:8000; then
+                        if ! curl -f http://localhost:8000; then
                             echo "ERROR: API not responding!"
                             docker logs fastapi-app
                             exit 1
