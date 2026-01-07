@@ -121,7 +121,7 @@ pipeline {
                         fi
                         
                         # Try to access API - MUST succeed
-                        if ! docker exec fastapi-app curl -f http://localhost:8000; then
+                        if ! docker exec fastapi-app python3 -c "import urllib.request; urllib.request.urlopen('http://localhost:8000').read()"; then
                             echo "ERROR: API not responding!"
                             docker logs fastapi-app
                             exit 1
