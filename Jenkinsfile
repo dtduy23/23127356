@@ -1,6 +1,10 @@
 pipeline {
     agent any
     
+    triggers {
+        githubPush()
+    }
+    
     environment {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-credentials')
         IMAGE_NAME = "duyd4010/23127356"  
