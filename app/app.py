@@ -17,3 +17,7 @@ def test():
 @app.post("/post")
 def post():
     return{"result:": "test posting"}
+
+@app.post("/post")
+def post2():
+    return {"result:": "test 2"}
