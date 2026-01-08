@@ -16,8 +16,12 @@ def test():
 
 @app.post("/post")
 def post():
-    return{"result:": "test posting"}
+    return {"result": "test posting"}
 
-@app.post("/post")
+@app.post("/post2")
 def post2():
-    return {"result:": "test 2"}
+    return {"result": "test 2"}
+
+@app.delete("/post3")
+def post2():
+    return {"result": "test 2"}
