@@ -18,9 +18,6 @@ def test():
 def post():
     return {"result": "test posting"}
 
-@app.post("/post2")
-def post2():
-    return {"result": "test 2"}
 
 @app.delete("/post3")
 def post2():
